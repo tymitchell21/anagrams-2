@@ -13,15 +13,14 @@ words.forEach (word => {
 })
 
 for (let key in anaWords) {
-    if (anaWords[key].length>=5) {
+    if (anaWords[key].length < 5) continue
 
-        display ('', 'p', 'ans')
-        document.getElementById('ans').lastChild.id = key
+    display ('', 'p', 'ans')
+    document.getElementById('ans').lastChild.id = key
 
-        anaWords[key].forEach (x => {
-            display (`${x} `, 'span', key)
-        })
-    }
+    anaWords[key].forEach (x => {
+        display (`${x} `, 'span', key)
+    })
 }
 
 function alphabetize(a) {  
